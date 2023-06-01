@@ -26,9 +26,9 @@ jobs:
   test:
 
     strategy:
-    matrix:
-    browser: [chrome, firefox]
-    device: [desktop,mobile]
+      matrix:
+        browser: [chrome, firefox]
+        device: [desktop, mobile]
 
     runs-on: ubuntu-22.04
 
@@ -51,8 +51,5 @@ jobs:
 
       - name: Another step
         run: echo "This is another step in the same job"
-
-
-        
 
 
