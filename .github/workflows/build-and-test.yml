@@ -29,6 +29,8 @@ jobs:
 
     timeout-minutes: 10
 
+    needs: build
+
     env:
       NAME: Planet
 
@@ -40,18 +42,3 @@ jobs:
       - name: Another step
         run: echo "This is another step in the same job"
 
-
-new:
-
-    runs-on: ubuntu-24.04
-
-    timeout-minutes: 15
-
-
-    steps:
-
-      - name: Step inside test job
-        run: echo "Hello $NAME"
-
-      - name: Another step
-        run: echo "This is another step in the same job"
